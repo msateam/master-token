@@ -7,11 +7,7 @@
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
 
 body{
 font-family:Arial,sans-serif;
@@ -19,227 +15,148 @@ background:#050505;
 color:white;
 text-align:center;
 overflow-x:hidden;
-
-/* cyber grid background */
-
 background-image:
 linear-gradient(rgba(0,255,100,0.08) 1px, transparent 1px),
 linear-gradient(90deg, rgba(0,255,100,0.08) 1px, transparent 1px);
-
 background-size:35px 35px;
 }
 
-/* glow animation */
-
 @keyframes pulse{
-
-0%{
-box-shadow:0 0 10px #00ff66;
+0%{box-shadow:0 0 10px #00ff66;}
+50%{box-shadow:0 0 35px #00ff66;}
+100%{box-shadow:0 0 10px #00ff66;}
 }
 
-50%{
-box-shadow:0 0 35px #00ff66;
-}
-
-100%{
-box-shadow:0 0 10px #00ff66;
-}
-
-}
-
-header{
-
-padding:80px 20px;
-
-}
-
-/* logo */
+header{padding:80px 20px;}
 
 .logo-container{
-
-width:190px;
-height:190px;
-
+width:190px;height:190px;
 margin:auto;
-
 border:4px solid #00ff66;
-
 border-radius:25px;
-
 display:flex;
-
 justify-content:center;
-
 align-items:center;
-
 animation:pulse 2.5s infinite;
-
 margin-bottom:35px;
-
 background:#090909;
-
 }
 
-/* logo design */
-
 .logo{
-
 font-size:95px;
-
 font-weight:bold;
-
 color:#00ff66;
-
 text-shadow:0 0 20px #00ff66;
-
 font-family:Impact;
-
 }
 
 h1{
-
 font-size:65px;
-
 color:#00ff66;
-
 margin-bottom:10px;
-
 letter-spacing:4px;
-
 text-shadow:0 0 15px #00ff66;
-
 }
 
-h2{
-
-font-size:28px;
-
-margin-bottom:20px;
-
-}
+h2{font-size:28px;margin-bottom:20px;color:#00ff66;}
 
 .tagline{
-
 font-size:20px;
-
 max-width:650px;
-
 margin:auto;
-
 line-height:35px;
-
 color:#d0d0d0;
-
 margin-bottom:40px;
-
 }
 
-/* buttons */
-
 .buttons{
-
 display:flex;
-
 justify-content:center;
-
 flex-wrap:wrap;
-
 gap:20px;
-
 }
 
 .button{
-
 padding:16px 30px;
-
 border:2px solid #00ff66;
-
 color:#00ff66;
-
 text-decoration:none;
-
 border-radius:12px;
-
 transition:0.3s;
-
 font-weight:bold;
-
 }
 
 .button:hover{
-
 background:#00ff66;
-
 color:black;
-
 box-shadow:0 0 20px #00ff66;
-
 }
 
-/* neon divider */
-
-.divider{
-
-height:2px;
-
-background:#00ff66;
-
-width:80%;
-
-margin:50px auto;
-
-box-shadow:0 0 15px #00ff66;
-
-}
-
-/* preview next sections */
-
-.preview{
-
-max-width:900px;
-
+section{
+padding:70px 20px;
+max-width:1100px;
 margin:auto;
+}
 
-padding:30px;
-
+.card{
 border:2px solid #00ff66;
-
+padding:25px;
 border-radius:20px;
-
-box-shadow:0 0 20px rgba(0,255,100,0.4);
-
-background:#0b0b0b;
-
-margin-bottom:80px;
-
+box-shadow:0 0 15px rgba(0,255,100,0.4);
+background:#0a0a0a;
+margin:20px;
 }
 
-.preview h3{
-
-color:#00ff66;
-
-margin-bottom:20px;
-
-font-size:28px;
-
+.flex{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
 }
 
-.preview p{
-
-line-height:35px;
-
+.token-circle{
+width:170px;
+height:170px;
+border:3px solid #00ff66;
+border-radius:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+margin:15px;
+box-shadow:0 0 20px #00ff66;
 font-size:18px;
+padding:10px;
+background:#080808;
+}
 
-color:#cccccc;
+.banner{
+font-size:30px;
+padding:40px;
+margin:40px;
+border:3px solid #00ff66;
+box-shadow:0 0 30px #00ff66;
+background:#090909;
+line-height:50px;
+}
 
+.timeline{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+}
+
+.phase{
+width:230px;
+margin:15px;
+padding:20px;
+background:#0a0a0a;
+border-left:4px solid #00ff66;
+text-align:left;
+box-shadow:0 0 15px rgba(0,255,100,0.3);
 }
 
 footer{
-
-padding:30px;
-
+padding:40px;
 color:gray;
-
 }
 
 </style>
@@ -250,52 +167,123 @@ color:gray;
 <header>
 
 <div class="logo-container">
-
 <div class="logo">M</div>
-
 </div>
 
 <h1>MASTER</h1>
-
-<h2>MSA TOKEN</h2>
+<h3>MSA TOKEN</h3>
 
 <p class="tagline">
-
 The Future Belongs To Strong Communities.<br>
-
-A decentralized meme ecosystem powered by Solana blockchain technology.
-
+A decentralized meme ecosystem powered by Solana blockchain.
 </p>
 
 <div class="buttons">
-
 <a href="#" class="button">WHITEPAPER</a>
-
 <a href="#" class="button">JOIN COMMUNITY</a>
-
 </div>
 
 </header>
 
-<div class="divider"></div>
+<section>
 
-<section class="preview">
+<h2>ABOUT MASTER</h2>
 
-<h3>PROJECT INITIALIZATION</h3>
+<div class="card">
 
-<p>
+MASTER is a next generation decentralized meme coin focused on long-term growth, strong community development, transparency and sustainable expansion in the digital economy.
 
-MASTER is entering the next generation of decentralized digital assets.<br>
+</div>
 
-Focused on transparency, community power, sustainability and long term expansion.
+</section>
 
-</p>
+<section>
+
+<h2>TOKENOMICS</h2>
+
+<div class="flex">
+
+<div class="token-circle">Supply<br><br>1 Trillion</div>
+
+<div class="token-circle">Community<br><br>40%</div>
+
+<div class="token-circle">Liquidity<br><br>20%</div>
+
+<div class="token-circle">Marketing<br><br>15%</div>
+
+<div class="token-circle">Development<br><br>15%</div>
+
+<div class="token-circle">Reserve<br><br>10%</div>
+
+</div>
+
+</section>
+
+<section>
+
+<div class="banner">
+
+MASTER IS NOT JUST A TOKEN<br>
+
+IT IS A DIGITAL MOVEMENT
+
+</div>
+
+</section>
+
+<section>
+
+<h2>ROADMAP</h2>
+
+<div class="timeline">
+
+<div class="phase">
+
+<b>PHASE 1</b><br><br>
+
+• Website Launch<br>
+• Brand Identity<br>
+• Social Infrastructure
+
+</div>
+
+<div class="phase">
+
+<b>PHASE 2</b><br><br>
+
+• Community Building<br>
+• Marketing Strategy<br>
+• Expansion Start
+
+</div>
+
+<div class="phase">
+
+<b>PHASE 3</b><br><br>
+
+• Token Deployment<br>
+• Liquidity Creation<br>
+• DEX Listing
+
+</div>
+
+<div class="phase">
+
+<b>PHASE 4</b><br><br>
+
+• Ecosystem Growth<br>
+• Partnerships<br>
+• Global Reach
+
+</div>
+
+</div>
 
 </section>
 
 <footer>
 
-MASTER Project V3 Initial Build
+MASTER PROJECT V3 BUILD 2
 
 </footer>
 
