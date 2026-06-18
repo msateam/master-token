@@ -15,44 +15,44 @@ box-sizing:border-box;
 
 body{
 font-family:Arial,sans-serif;
-background:#030303;
+background:#020202;
 color:white;
 overflow-x:hidden;
 text-align:center;
 
 background-image:
-linear-gradient(rgba(0,255,120,0.05) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,120,0.05) 1px, transparent 1px);
+linear-gradient(rgba(0,255,100,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,100,0.05) 1px, transparent 1px);
 
 background-size:40px 40px;
 }
 
 @keyframes pulse{
 
-0%{box-shadow:0 0 10px #00ff66;}
+0%{box-shadow:0 0 8px #00ff66;}
 
-50%{box-shadow:0 0 40px #00ff66;}
+50%{box-shadow:0 0 35px #00ff66;}
 
-100%{box-shadow:0 0 10px #00ff66;}
+100%{box-shadow:0 0 8px #00ff66;}
 
 }
 
 header{
 
-padding:80px 20px;
+padding:70px 20px;
 
 }
 
 .logo-box{
 
-width:200px;
-height:200px;
-
-margin:auto;
+width:210px;
+height:210px;
 
 border:4px solid #00ff66;
 
-border-radius:28px;
+margin:auto;
+
+border-radius:30px;
 
 display:flex;
 justify-content:center;
@@ -60,27 +60,34 @@ align-items:center;
 
 animation:pulse 2.5s infinite;
 
-margin-bottom:40px;
+background:#060606;
 
-background:#050505;
+margin-bottom:40px;
 
 }
 
 .logo{
 
-font-size:95px;
+font-size:100px;
+
 font-weight:bold;
-color:#00ff66;
-text-shadow:0 0 25px #00ff66;
+
 font-family:Impact;
+
+color:#00ff66;
+
+text-shadow:0 0 25px #00ff66;
 
 }
 
 h1{
 
-font-size:70px;
+font-size:75px;
+
 letter-spacing:5px;
+
 color:#00ff66;
+
 text-shadow:0 0 20px #00ff66;
 
 margin-bottom:10px;
@@ -90,22 +97,26 @@ margin-bottom:10px;
 .subtitle{
 
 font-size:24px;
-color:#d0d0d0;
 
-margin-bottom:35px;
+margin-bottom:30px;
+
+color:#cccccc;
 
 }
 
-.description{
+.desc{
 
-max-width:700px;
+max-width:800px;
+
 margin:auto;
 
-font-size:18px;
-line-height:34px;
-color:#cccccc;
+font-size:19px;
+
+line-height:36px;
 
 margin-bottom:40px;
+
+color:#d0d0d0;
 
 }
 
@@ -120,27 +131,29 @@ flex-wrap:wrap;
 
 .btn{
 
-padding:15px 30px;
+padding:16px 32px;
 
 border:2px solid #00ff66;
 
 text-decoration:none;
+
 color:#00ff66;
+
+font-weight:bold;
 
 border-radius:12px;
 
 transition:0.3s;
-
-font-weight:bold;
 
 }
 
 .btn:hover{
 
 background:#00ff66;
+
 color:black;
 
-box-shadow:0 0 25px #00ff66;
+box-shadow:0 0 20px #00ff66;
 
 }
 
@@ -149,16 +162,18 @@ section{
 padding:80px 20px;
 
 max-width:1200px;
+
 margin:auto;
 
 }
 
 .section-title{
 
-font-size:38px;
+font-size:40px;
+
 color:#00ff66;
 
-margin-bottom:45px;
+margin-bottom:50px;
 
 text-shadow:0 0 12px #00ff66;
 
@@ -166,9 +181,13 @@ text-shadow:0 0 12px #00ff66;
 
 .card{
 
-border:2px solid #00ff66;
+max-width:950px;
+
+margin:auto;
 
 padding:30px;
+
+border:2px solid #00ff66;
 
 border-radius:22px;
 
@@ -176,15 +195,11 @@ background:#080808;
 
 box-shadow:0 0 20px rgba(0,255,100,0.3);
 
-line-height:34px;
-
-max-width:900px;
-
-margin:auto;
+line-height:35px;
 
 }
 
-.tokenomics-box{
+.tokenomics{
 
 display:flex;
 
@@ -192,16 +207,17 @@ justify-content:center;
 
 align-items:center;
 
-flex-wrap:wrap;
+gap:70px;
 
-gap:60px;
+flex-wrap:wrap;
 
 }
 
-.donut{
+.chart{
 
-width:300px;
-height:300px;
+width:320px;
+
+height:320px;
 
 border-radius:50%;
 
@@ -209,39 +225,39 @@ background:conic-gradient(
 
 #00ff66 0% 40%,
 
-#00aa44 40% 70%,
+#00bb55 40% 70%,
 
-#007722 70% 85%,
+#009944 70% 85%,
 
-#005511 85% 95%,
+#006622 85% 95%,
 
 #ffffff 95% 100%
 
 );
 
-display:flex;
-
-justify-content:center;
-align-items:center;
+position:relative;
 
 box-shadow:0 0 30px #00ff66;
 
-position:relative;
-
 }
 
-.donut::before{
+.chart::before{
 
 content:"";
 
 position:absolute;
 
-width:130px;
-height:130px;
+width:140px;
 
-background:#050505;
+height:140px;
+
+background:#020202;
 
 border-radius:50%;
+
+top:90px;
+
+left:90px;
 
 }
 
@@ -251,20 +267,39 @@ text-align:left;
 
 font-size:20px;
 
-line-height:42px;
+line-height:45px;
+
+max-width:400px;
 
 }
 
-.token-list span{
+.click{
 
-color:#00ff66;
-font-weight:bold;
+padding:10px;
+
+margin:8px 0;
+
+border:1px solid #00ff66;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:0.3s;
 
 }
 
-.lock-box{
+.click:hover{
 
-margin-top:45px;
+background:#00ff66;
+
+color:black;
+
+}
+
+.info-box{
+
+margin-top:40px;
 
 padding:25px;
 
@@ -274,21 +309,11 @@ border-radius:18px;
 
 background:#090909;
 
-box-shadow:0 0 15px rgba(0,255,100,0.3);
-
-font-size:20px;
+font-size:19px;
 
 line-height:35px;
 
-}
-
-footer{
-
-padding:40px;
-
-color:gray;
-
-margin-top:60px;
+box-shadow:0 0 15px rgba(0,255,100,0.3);
 
 }
 
@@ -314,11 +339,11 @@ MSA TOKEN
 
 </div>
 
-<div class="description">
+<div class="desc">
 
-The Future Belongs To Communities.<br>
+The Future Belongs To Strong Communities.<br>
 
-MASTER is a decentralized Solana meme ecosystem built for long term growth, community power and digital expansion.
+A decentralized Solana ecosystem built for long term growth, digital freedom and strong community expansion.
 
 </div>
 
@@ -332,7 +357,6 @@ MASTER is a decentralized Solana meme ecosystem built for long term growth, comm
 
 </header>
 
-
 <section>
 
 <div class="section-title">
@@ -343,11 +367,100 @@ ABOUT MASTER
 
 <div class="card">
 
-MASTER (MSA) is a next generation decentralized community driven meme coin focused on creating an active ecosystem powered by Solana blockchain technology.
+MASTER (MSA) is a decentralized community driven meme coin built on Solana blockchain.
 
-Built for strong holders, long term expansion and future digital movement.
+Focused on sustainability, transparency, strong holder community and long term ecosystem growth.
 
 Founder: Mohammad Saraei Ara
+
+</div>
+
+</section>
+
+<section>
+
+<div class="section-title">
+
+TOKENOMICS
+
+</div>
+
+<div class="tokenomics">
+
+<div class="chart"></div>
+
+<div class="token-list">
+
+<div class="click" onclick="showInfo('liq')">
+
+● 40% Liquidity Pool
+
+</div>
+
+<div class="click" onclick="showInfo('com')">
+
+● 30% Community Rewards
+
+</div>
+
+<div class="click" onclick="showInfo('mark')">
+
+● 15% Marketing Wallet
+
+</div>
+
+<div class="click" onclick="showInfo('list')">
+
+● 10% Exchange Listings
+
+</div>
+
+<div class="click" onclick="showInfo('dev')">
+
+● 5% Development
+
+</div>
+
+<br>
+
+<b>Total Supply:</b><br>
+
+1,000,000,000,000 MSA
+
+</div>
+
+</div>
+
+<div class="info-box" id="infoBox">
+
+Click any allocation section to see details.
+
+</div>
+
+</section>
+<section>
+
+<div class="section-title">
+
+ROADMAP
+
+</div>
+
+<div class="card">
+
+PHASE 1 → Website Launch → Brand Identity → Social Infrastructure
+
+<br><br>
+
+PHASE 2 → Community Growth → Marketing Expansion → Holder Network
+
+<br><br>
+
+PHASE 3 → Token Deployment → Liquidity Creation → DEX Listing
+
+<br><br>
+
+PHASE 4 → Ecosystem Growth → Partnerships → Global Expansion
 
 </div>
 
@@ -358,50 +471,239 @@ Founder: Mohammad Saraei Ara
 
 <div class="section-title">
 
-TOKENOMICS
+WHITEPAPER
 
 </div>
 
-<div class="tokenomics-box">
+<div class="card">
 
-<div class="donut"></div>
+MASTER whitepaper defines long term project vision, token utility, ecosystem development, security structure and future expansion strategy.
 
-<div class="token-list">
+<br><br>
 
-<span>40%</span> Liquidity Locked<br>
+Core Principles:
 
-<span>30%</span> Community Rewards<br>
+<br><br>
 
-<span>15%</span> Marketing<br>
+• Transparency
 
-<span>10%</span> CEX / DEX Listings<br>
+<br>
 
-<span>5%</span> Development<br><br>
+• Sustainability
 
-<b>Total Supply:</b><br>
+<br>
 
-1,000,000,000,000 MSA
+• Decentralization
 
-</div>
+<br>
 
-</div>
+• Community First Strategy
 
-<div class="lock-box">
+<br>
 
-LIQUIDITY LOCKED<br>
-
-100% of liquidity will remain locked for a minimum period of 12 months.
+• Long Term Growth Vision
 
 </div>
 
 </section>
 
 
-<footer>
+<section>
 
-MASTER PROJECT — BUILD V4
+<div class="section-title">
+
+COMMUNITY NETWORK
+
+</div>
+
+<div class="tokenomics">
+
+<div class="card" style="width:230px;">
+
+📡 Telegram
+
+<br><br>
+
+Official Community Hub
+
+</div>
+
+<div class="card" style="width:230px;">
+
+🐦 X Platform
+
+<br><br>
+
+Official Announcements
+
+</div>
+
+<div class="card" style="width:230px;">
+
+💬 Discord
+
+<br><br>
+
+Community Governance
+
+</div>
+
+<div class="card" style="width:230px;">
+
+⚙ DAO Future
+
+<br><br>
+
+Decentralized Voting
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-title">
+
+FUTURE ECOSYSTEM
+
+</div>
+
+<div class="card">
+
+MASTER ecosystem will continue expanding through future blockchain integrations.
+
+<br><br>
+
+• NFT Marketplace
+
+<br>
+
+• Reward System
+
+<br>
+
+• Community Governance
+
+<br>
+
+• DEX Listings
+
+<br>
+
+• CEX Listings
+
+<br>
+
+• Global Partnerships
+
+<br>
+
+• Ecosystem Expansion
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="section-title">
+
+WHY MASTER
+
+</div>
+
+<div class="card">
+
+Built for strong communities.
+
+<br><br>
+
+Powered by Solana blockchain.
+
+<br><br>
+
+Designed for sustainable long term growth.
+
+<br><br>
+
+Community driven ecosystem.
+
+<br><br>
+
+Focused on future digital movement.
+
+</div>
+
+</section>
+
+
+<footer style="padding:60px;color:gray;">
+
+MASTER (MSA)
+
+<br><br>
+
+Powered By Solana
+
+<br><br>
+
+Founder: Mohammad Saraei Ara
+
+<br><br>
+
+Official Project 2025
 
 </footer>
+
+
+<script>
+
+function showInfo(type){
+
+let box = document.getElementById("infoBox");
+
+if(type=="liq"){
+
+box.innerHTML =
+"<b>Liquidity Pool</b><br>40% reserved for liquidity pool and locked smart contract stability.";
+
+}
+
+if(type=="com"){
+
+box.innerHTML =
+"<b>Community Rewards</b><br>30% allocated for community incentives and holder rewards.";
+
+}
+
+if(type=="mark"){
+
+box.innerHTML =
+"<b>Marketing Wallet</b><br>15% allocated for future advertising campaigns and project visibility.";
+
+}
+
+if(type=="list"){
+
+box.innerHTML =
+"<b>Exchange Listings</b><br>10% reserved for DEX and future CEX exchange listings.";
+
+}
+
+if(type=="dev"){
+
+box.innerHTML =
+"<b>Development Fund</b><br>5% reserved for development, upgrades and ecosystem expansion.";
+
+}
+
+}
+
+</script>
 
 </body>
 </html>
