@@ -7,231 +7,295 @@
 
 <style>
 
-body{
-background:#000;
-color:white;
-font-family:Arial, sans-serif;
+*{
 margin:0;
 padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:Arial,sans-serif;
+background:#050505;
+color:white;
 text-align:center;
+overflow-x:hidden;
+
+/* cyber grid background */
+
+background-image:
+linear-gradient(rgba(0,255,100,0.08) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,100,0.08) 1px, transparent 1px);
+
+background-size:35px 35px;
+}
+
+/* glow animation */
+
+@keyframes pulse{
+
+0%{
+box-shadow:0 0 10px #00ff66;
+}
+
+50%{
+box-shadow:0 0 35px #00ff66;
+}
+
+100%{
+box-shadow:0 0 10px #00ff66;
+}
+
 }
 
 header{
-padding:60px 20px;
-border-bottom:2px solid #00ff66;
+
+padding:80px 20px;
+
 }
 
-.logo{
-width:140px;
-height:140px;
+/* logo */
+
+.logo-container{
+
+width:190px;
+height:190px;
+
 margin:auto;
-border:3px solid #00ff66;
-border-radius:20px;
+
+border:4px solid #00ff66;
+
+border-radius:25px;
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
-font-size:80px;
+
+animation:pulse 2.5s infinite;
+
+margin-bottom:35px;
+
+background:#090909;
+
+}
+
+/* logo design */
+
+.logo{
+
+font-size:95px;
+
 font-weight:bold;
+
 color:#00ff66;
-box-shadow:0 0 25px #00ff66;
-margin-bottom:30px;
+
+text-shadow:0 0 20px #00ff66;
+
+font-family:Impact;
+
 }
 
 h1{
-font-size:52px;
+
+font-size:65px;
+
 color:#00ff66;
-margin:10px;
+
+margin-bottom:10px;
+
+letter-spacing:4px;
+
+text-shadow:0 0 15px #00ff66;
+
 }
 
 h2{
-font-size:25px;
-margin:10px;
+
+font-size:28px;
+
+margin-bottom:20px;
+
 }
 
-section{
-padding:40px 20px;
-max-width:900px;
+.tagline{
+
+font-size:20px;
+
+max-width:650px;
+
 margin:auto;
-border-bottom:1px solid #222;
+
+line-height:35px;
+
+color:#d0d0d0;
+
+margin-bottom:40px;
+
 }
 
-.green{
-color:#00ff66;
+/* buttons */
+
+.buttons{
+
+display:flex;
+
+justify-content:center;
+
+flex-wrap:wrap;
+
+gap:20px;
+
 }
 
 .button{
-display:inline-block;
-padding:12px 25px;
-margin:10px;
+
+padding:16px 30px;
+
 border:2px solid #00ff66;
+
 color:#00ff66;
+
 text-decoration:none;
-border-radius:10px;
+
+border-radius:12px;
+
 transition:0.3s;
+
+font-weight:bold;
+
 }
 
 .button:hover{
+
 background:#00ff66;
+
 color:black;
+
+box-shadow:0 0 20px #00ff66;
+
 }
 
-.box{
-border:1px solid #00ff66;
-padding:20px;
-margin:15px;
-border-radius:15px;
-box-shadow:0 0 12px #00ff66;
+/* neon divider */
+
+.divider{
+
+height:2px;
+
+background:#00ff66;
+
+width:80%;
+
+margin:50px auto;
+
+box-shadow:0 0 15px #00ff66;
+
+}
+
+/* preview next sections */
+
+.preview{
+
+max-width:900px;
+
+margin:auto;
+
+padding:30px;
+
+border:2px solid #00ff66;
+
+border-radius:20px;
+
+box-shadow:0 0 20px rgba(0,255,100,0.4);
+
+background:#0b0b0b;
+
+margin-bottom:80px;
+
+}
+
+.preview h3{
+
+color:#00ff66;
+
+margin-bottom:20px;
+
+font-size:28px;
+
+}
+
+.preview p{
+
+line-height:35px;
+
+font-size:18px;
+
+color:#cccccc;
+
 }
 
 footer{
+
 padding:30px;
-font-size:14px;
+
 color:gray;
+
 }
 
 </style>
-
 </head>
+
 <body>
 
 <header>
 
+<div class="logo-container">
+
 <div class="logo">M</div>
 
+</div>
+
 <h1>MASTER</h1>
+
 <h2>MSA TOKEN</h2>
 
-<p>The Future Belongs To Strong Communities</p>
+<p class="tagline">
+
+The Future Belongs To Strong Communities.<br>
+
+A decentralized meme ecosystem powered by Solana blockchain technology.
+
+</p>
+
+<div class="buttons">
 
 <a href="#" class="button">WHITEPAPER</a>
+
 <a href="#" class="button">JOIN COMMUNITY</a>
+
+</div>
 
 </header>
 
-<section>
+<div class="divider"></div>
 
-<h2 class="green">ABOUT MASTER</h2>
+<section class="preview">
+
+<h3>PROJECT INITIALIZATION</h3>
 
 <p>
-MASTER is a decentralized meme coin project built on Solana network,
-focused on strong community growth, transparency, sustainability and future digital expansion.
+
+MASTER is entering the next generation of decentralized digital assets.<br>
+
+Focused on transparency, community power, sustainability and long term expansion.
+
 </p>
-
-</section>
-
-<section>
-
-<h2 class="green">TOKENOMICS</h2>
-
-<div class="box">
-
-<p>Total Supply: 1,000,000,000,000 MSA</p>
-<p>Blockchain: Solana</p>
-<p>Community: 40%</p>
-<p>Liquidity Pool: 20%</p>
-<p>Marketing: 15%</p>
-<p>Development: 15%</p>
-<p>Reserve: 10%</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="green">ROADMAP</h2>
-
-<div class="box">
-
-<p><b>Phase 1</b></p>
-<p>Website Launch</p>
-<p>Brand Identity Creation</p>
-<p>Social Infrastructure</p>
-
-<br>
-
-<p><b>Phase 2</b></p>
-<p>Community Building</p>
-<p>Marketing Campaign</p>
-<p>Growth Strategy</p>
-
-<br>
-
-<p><b>Phase 3</b></p>
-<p>Token Deployment</p>
-<p>Liquidity Creation</p>
-<p>DEX Listing</p>
-
-<br>
-
-<p><b>Phase 4</b></p>
-<p>Ecosystem Expansion</p>
-<p>Strategic Partnerships</p>
-<p>Global Adoption</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="green">WHITEPAPER</h2>
-
-<div class="box">
-
-<p>Official MASTER Whitepaper</p>
-<p>Project Vision</p>
-<p>Security Protocol</p>
-<p>Token Utility</p>
-<p>Community Governance</p>
-<p>Long Term Sustainability</p>
-<p>Future Expansion Plan</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="green">COMMUNITY NETWORK</h2>
-
-<div class="box">
-
-<p>Telegram — Official Community Hub</p>
-<p>X (Twitter) — Official Announcements</p>
-<p>Discord — Governance Community</p>
-<p>GitHub — Development Infrastructure</p>
-
-</div>
-
-</section>
-
-<section>
-
-<h2 class="green">WHY MASTER ?</h2>
-
-<div class="box">
-
-<p>Transparent Vision</p>
-<p>Community First</p>
-<p>Solana Powered</p>
-<p>Long-Term Development Strategy</p>
-<p>Decentralized Future</p>
-<p>Strong Ecosystem Design</p>
-
-</div>
 
 </section>
 
 <footer>
 
-MASTER (MSA)<br><br>
-
-Powered By Solana<br><br>
-
-Founder: Mohammad Saraei Ara<br><br>
-
-Official Project © 2025
+MASTER Project V3 Initial Build
 
 </footer>
 
