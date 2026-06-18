@@ -7,283 +7,399 @@
 
 <style>
 
-*{margin:0;padding:0;box-sizing:border-box;}
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
 body{
 font-family:Arial,sans-serif;
-background:#050505;
+background:#030303;
 color:white;
-text-align:center;
 overflow-x:hidden;
+text-align:center;
+
 background-image:
-linear-gradient(rgba(0,255,100,0.08) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,100,0.08) 1px, transparent 1px);
-background-size:35px 35px;
+linear-gradient(rgba(0,255,120,0.05) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,120,0.05) 1px, transparent 1px);
+
+background-size:40px 40px;
 }
 
 @keyframes pulse{
+
 0%{box-shadow:0 0 10px #00ff66;}
-50%{box-shadow:0 0 35px #00ff66;}
+
+50%{box-shadow:0 0 40px #00ff66;}
+
 100%{box-shadow:0 0 10px #00ff66;}
+
 }
 
-header{padding:80px 20px;}
+header{
 
-.logo-container{
-width:190px;height:190px;
+padding:80px 20px;
+
+}
+
+.logo-box{
+
+width:200px;
+height:200px;
+
 margin:auto;
+
 border:4px solid #00ff66;
-border-radius:25px;
+
+border-radius:28px;
+
 display:flex;
 justify-content:center;
 align-items:center;
+
 animation:pulse 2.5s infinite;
-margin-bottom:35px;
-background:#090909;
+
+margin-bottom:40px;
+
+background:#050505;
+
 }
 
 .logo{
+
 font-size:95px;
 font-weight:bold;
 color:#00ff66;
-text-shadow:0 0 20px #00ff66;
+text-shadow:0 0 25px #00ff66;
 font-family:Impact;
+
 }
 
 h1{
-font-size:65px;
+
+font-size:70px;
+letter-spacing:5px;
 color:#00ff66;
+text-shadow:0 0 20px #00ff66;
+
 margin-bottom:10px;
-letter-spacing:4px;
-text-shadow:0 0 15px #00ff66;
+
 }
 
-h2{font-size:28px;margin-bottom:20px;color:#00ff66;}
+.subtitle{
 
-.tagline{
-font-size:20px;
-max-width:650px;
-margin:auto;
-line-height:35px;
+font-size:24px;
 color:#d0d0d0;
+
+margin-bottom:35px;
+
+}
+
+.description{
+
+max-width:700px;
+margin:auto;
+
+font-size:18px;
+line-height:34px;
+color:#cccccc;
+
 margin-bottom:40px;
+
 }
 
 .buttons{
+
 display:flex;
 justify-content:center;
-flex-wrap:wrap;
 gap:20px;
+flex-wrap:wrap;
+
 }
 
-.button{
-padding:16px 30px;
+.btn{
+
+padding:15px 30px;
+
 border:2px solid #00ff66;
-color:#00ff66;
+
 text-decoration:none;
+color:#00ff66;
+
 border-radius:12px;
+
 transition:0.3s;
+
 font-weight:bold;
+
 }
 
-.button:hover{
+.btn:hover{
+
 background:#00ff66;
 color:black;
-box-shadow:0 0 20px #00ff66;
+
+box-shadow:0 0 25px #00ff66;
+
 }
 
 section{
-padding:70px 20px;
-max-width:1100px;
+
+padding:80px 20px;
+
+max-width:1200px;
 margin:auto;
+
+}
+
+.section-title{
+
+font-size:38px;
+color:#00ff66;
+
+margin-bottom:45px;
+
+text-shadow:0 0 12px #00ff66;
+
 }
 
 .card{
+
 border:2px solid #00ff66;
-padding:25px;
-border-radius:20px;
-box-shadow:0 0 15px rgba(0,255,100,0.4);
-background:#0a0a0a;
-margin:20px;
+
+padding:30px;
+
+border-radius:22px;
+
+background:#080808;
+
+box-shadow:0 0 20px rgba(0,255,100,0.3);
+
+line-height:34px;
+
+max-width:900px;
+
+margin:auto;
+
 }
 
-.flex{
+.tokenomics-box{
+
 display:flex;
-flex-wrap:wrap;
+
 justify-content:center;
+
+align-items:center;
+
+flex-wrap:wrap;
+
+gap:60px;
+
 }
 
-.token-circle{
-width:170px;
-height:170px;
-border:3px solid #00ff66;
+.donut{
+
+width:300px;
+height:300px;
+
 border-radius:50%;
+
+background:conic-gradient(
+
+#00ff66 0% 40%,
+
+#00aa44 40% 70%,
+
+#007722 70% 85%,
+
+#005511 85% 95%,
+
+#ffffff 95% 100%
+
+);
+
 display:flex;
+
 justify-content:center;
 align-items:center;
-margin:15px;
-box-shadow:0 0 20px #00ff66;
-font-size:18px;
-padding:10px;
-background:#080808;
-}
 
-.banner{
-font-size:30px;
-padding:40px;
-margin:40px;
-border:3px solid #00ff66;
 box-shadow:0 0 30px #00ff66;
-background:#090909;
-line-height:50px;
+
+position:relative;
+
 }
 
-.timeline{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+.donut::before{
+
+content:"";
+
+position:absolute;
+
+width:130px;
+height:130px;
+
+background:#050505;
+
+border-radius:50%;
+
 }
 
-.phase{
-width:230px;
-margin:15px;
-padding:20px;
-background:#0a0a0a;
-border-left:4px solid #00ff66;
+.token-list{
+
 text-align:left;
+
+font-size:20px;
+
+line-height:42px;
+
+}
+
+.token-list span{
+
+color:#00ff66;
+font-weight:bold;
+
+}
+
+.lock-box{
+
+margin-top:45px;
+
+padding:25px;
+
+border:2px solid #00ff66;
+
+border-radius:18px;
+
+background:#090909;
+
 box-shadow:0 0 15px rgba(0,255,100,0.3);
+
+font-size:20px;
+
+line-height:35px;
+
 }
 
 footer{
+
 padding:40px;
+
 color:gray;
+
+margin-top:60px;
+
 }
 
 </style>
+
 </head>
 
 <body>
 
 <header>
 
-<div class="logo-container">
+<div class="logo-box">
+
 <div class="logo">M</div>
+
 </div>
 
 <h1>MASTER</h1>
-<h3>MSA TOKEN</h3>
 
-<p class="tagline">
-The Future Belongs To Strong Communities.<br>
-A decentralized meme ecosystem powered by Solana blockchain.
-</p>
+<div class="subtitle">
+
+MSA TOKEN
+
+</div>
+
+<div class="description">
+
+The Future Belongs To Communities.<br>
+
+MASTER is a decentralized Solana meme ecosystem built for long term growth, community power and digital expansion.
+
+</div>
 
 <div class="buttons">
-<a href="#" class="button">WHITEPAPER</a>
-<a href="#" class="button">JOIN COMMUNITY</a>
+
+<a href="#" class="btn">WHITEPAPER</a>
+
+<a href="#" class="btn">JOIN COMMUNITY</a>
+
 </div>
 
 </header>
 
+
 <section>
 
-<h2>ABOUT MASTER</h2>
+<div class="section-title">
+
+ABOUT MASTER
+
+</div>
 
 <div class="card">
 
-MASTER is a next generation decentralized meme coin focused on long-term growth, strong community development, transparency and sustainable expansion in the digital economy.
+MASTER (MSA) is a next generation decentralized community driven meme coin focused on creating an active ecosystem powered by Solana blockchain technology.
+
+Built for strong holders, long term expansion and future digital movement.
+
+Founder: Mohammad Saraei Ara
 
 </div>
 
 </section>
+
 
 <section>
 
-<h2>TOKENOMICS</h2>
+<div class="section-title">
 
-<div class="flex">
+TOKENOMICS
 
-<div class="token-circle">Supply<br><br>1 Trillion</div>
+</div>
 
-<div class="token-circle">Community<br><br>40%</div>
+<div class="tokenomics-box">
 
-<div class="token-circle">Liquidity<br><br>20%</div>
+<div class="donut"></div>
 
-<div class="token-circle">Marketing<br><br>15%</div>
+<div class="token-list">
 
-<div class="token-circle">Development<br><br>15%</div>
+<span>40%</span> Liquidity Locked<br>
 
-<div class="token-circle">Reserve<br><br>10%</div>
+<span>30%</span> Community Rewards<br>
+
+<span>15%</span> Marketing<br>
+
+<span>10%</span> CEX / DEX Listings<br>
+
+<span>5%</span> Development<br><br>
+
+<b>Total Supply:</b><br>
+
+1,000,000,000,000 MSA
+
+</div>
+
+</div>
+
+<div class="lock-box">
+
+LIQUIDITY LOCKED<br>
+
+100% of liquidity will remain locked for a minimum period of 12 months.
 
 </div>
 
 </section>
 
-<section>
-
-<div class="banner">
-
-MASTER IS NOT JUST A TOKEN<br>
-
-IT IS A DIGITAL MOVEMENT
-
-</div>
-
-</section>
-
-<section>
-
-<h2>ROADMAP</h2>
-
-<div class="timeline">
-
-<div class="phase">
-
-<b>PHASE 1</b><br><br>
-
-• Website Launch<br>
-• Brand Identity<br>
-• Social Infrastructure
-
-</div>
-
-<div class="phase">
-
-<b>PHASE 2</b><br><br>
-
-• Community Building<br>
-• Marketing Strategy<br>
-• Expansion Start
-
-</div>
-
-<div class="phase">
-
-<b>PHASE 3</b><br><br>
-
-• Token Deployment<br>
-• Liquidity Creation<br>
-• DEX Listing
-
-</div>
-
-<div class="phase">
-
-<b>PHASE 4</b><br><br>
-
-• Ecosystem Growth<br>
-• Partnerships<br>
-• Global Reach
-
-</div>
-
-</div>
-
-</section>
 
 <footer>
 
-MASTER PROJECT V3 BUILD 2
+MASTER PROJECT — BUILD V4
 
 </footer>
 
