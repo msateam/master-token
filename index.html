@@ -15,6 +15,13 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+user-select:none;
+
+-webkit-tap-highlight-color:transparent;
 }
 
 html{
@@ -25,7 +32,7 @@ body{
 
 font-family:Arial,sans-serif;
 
-background:#010101;
+background:#030303;
 
 color:white;
 
@@ -34,44 +41,34 @@ overflow-x:hidden;
 text-align:center;
 
 background-image:
-linear-gradient(rgba(0,255,120,0.04) 1px, transparent 1px),
-linear-gradient(90deg, rgba(0,255,120,0.04) 1px, transparent 1px);
+radial-gradient(circle at 20% 30%, rgba(0,255,120,0.08), transparent 25%),
+radial-gradient(circle at 80% 70%, rgba(0,255,120,0.06), transparent 25%),
+linear-gradient(rgba(0,255,100,0.03) 1px, transparent 1px),
+linear-gradient(90deg, rgba(0,255,100,0.03) 1px, transparent 1px);
 
-background-size:45px 45px;
+background-size: auto, auto, 40px 40px, 40px 40px;
 
 }
 
 
 @keyframes pulse{
 
-0%{
-box-shadow:0 0 8px #00ff66;
-}
+0%{ box-shadow:0 0 12px #00ff66; }
 
-50%{
-box-shadow:0 0 45px #00ff66;
-}
+50%{ box-shadow:0 0 45px #00ff66; }
 
-100%{
-box-shadow:0 0 8px #00ff66;
-}
+100%{ box-shadow:0 0 12px #00ff66; }
 
 }
 
 
-@keyframes floating{
+@keyframes float{
 
-0%{
-transform:translateY(0px);
-}
+0%{ transform:translateY(0px); }
 
-50%{
-transform:translateY(-10px);
-}
+50%{ transform:translateY(-12px); }
 
-100%{
-transform:translateY(0px);
-}
+100%{ transform:translateY(0px); }
 
 }
 
@@ -80,7 +77,7 @@ nav{
 
 width:100%;
 
-padding:25px;
+padding:22px;
 
 display:flex;
 
@@ -90,15 +87,17 @@ gap:35px;
 
 flex-wrap:wrap;
 
-border-bottom:1px solid rgba(0,255,100,0.2);
+background:#060606;
 
-background:#050505;
+border-bottom:1px solid rgba(0,255,100,0.2);
 
 position:sticky;
 
 top:0;
 
 z-index:1000;
+
+backdrop-filter:blur(10px);
 
 }
 
@@ -120,31 +119,39 @@ transition:0.3s;
 
 nav a:hover{
 
-text-shadow:0 0 10px #00ff66;
+text-shadow:0 0 15px #00ff66;
 
 }
 
 
 header{
 
-padding:90px 20px;
+padding:110px 20px;
 
 position:relative;
+
+min-height:100vh;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
 
 }
 
 
-.logo-box{
+.logo-wrapper{
 
-width:220px;
+width:240px;
 
-height:220px;
+height:240px;
 
 border:4px solid #00ff66;
 
-border-radius:35px;
-
-margin:auto;
+border-radius:38px;
 
 display:flex;
 
@@ -152,18 +159,18 @@ justify-content:center;
 
 align-items:center;
 
-background:#040404;
-
 animation:pulse 2.5s infinite;
 
-margin-bottom:45px;
+background:#050505;
+
+margin-bottom:40px;
 
 }
 
 
 .logo{
 
-font-size:110px;
+font-size:120px;
 
 font-family:Impact;
 
@@ -178,43 +185,45 @@ text-shadow:0 0 30px #00ff66;
 
 .main-title{
 
-font-size:82px;
+font-size:88px;
 
-letter-spacing:6px;
+letter-spacing:7px;
 
 color:#00ff66;
 
 text-shadow:0 0 25px #00ff66;
 
-margin-bottom:15px;
+margin-bottom:20px;
 
 }
 
 
-.sub{
+.subtitle{
 
-font-size:26px;
+font-size:24px;
 
-color:#d0d0d0;
+color:#d2d2d2;
 
-margin-bottom:35px;
+margin-bottom:40px;
+
+max-width:850px;
+
+line-height:42px;
 
 }
 
 
-.hero-text{
+.hero-line{
 
-max-width:900px;
+font-size:20px;
 
-margin:auto;
+line-height:40px;
 
-font-size:21px;
-
-line-height:38px;
-
-color:#cccccc;
+color:#bfbfbf;
 
 margin-bottom:45px;
+
+max-width:900px;
 
 }
 
@@ -229,12 +238,14 @@ gap:20px;
 
 flex-wrap:wrap;
 
+margin-bottom:60px;
+
 }
 
 
 .btn{
 
-padding:17px 35px;
+padding:16px 32px;
 
 border:2px solid #00ff66;
 
@@ -257,16 +268,14 @@ background:#00ff66;
 
 color:black;
 
-box-shadow:0 0 25px #00ff66;
+box-shadow:0 0 22px #00ff66;
 
 }
 
 
 .banner{
 
-margin-top:70px;
-
-font-size:34px;
+font-size:32px;
 
 line-height:55px;
 
@@ -274,9 +283,9 @@ font-weight:bold;
 
 color:#00ff66;
 
-animation:floating 3s infinite;
+animation:float 3s infinite;
 
-text-shadow:0 0 18px #00ff66;
+text-shadow:0 0 15px #00ff66;
 
 }
 
@@ -296,7 +305,7 @@ margin:auto;
 
 font-size:42px;
 
-margin-bottom:55px;
+margin-bottom:50px;
 
 color:#00ff66;
 
@@ -311,55 +320,19 @@ background:#080808;
 
 border:2px solid #00ff66;
 
-border-radius:22px;
+border-radius:24px;
 
-padding:35px;
-
-box-shadow:0 0 18px rgba(0,255,100,0.3);
-
-line-height:36px;
+padding:40px;
 
 max-width:1000px;
 
 margin:auto;
 
-font-size:18px;
-
-}
-
-
-.stats{
-
-display:flex;
-
-justify-content:center;
-
-gap:25px;
-
-flex-wrap:wrap;
-
-margin-top:40px;
-
-}
-
-
-.stat-box{
-
-width:250px;
-
-padding:25px;
-
-background:#070707;
-
-border:2px solid #00ff66;
-
-border-radius:18px;
-
-box-shadow:0 0 12px rgba(0,255,100,0.2);
+line-height:38px;
 
 font-size:18px;
 
-line-height:34px;
+box-shadow:0 0 18px rgba(0,255,100,0.2);
 
 }
 
@@ -380,14 +353,14 @@ line-height:34px;
 
 <a href="#community">Community</a>
 
-<a href="#ecosystem">Ecosystem</a>
+<a href="#legal">Legal</a>
 
 </nav>
 
 
 <header>
 
-<div class="logo-box">
+<div class="logo-wrapper">
 
 <div class="logo">
 
@@ -405,25 +378,31 @@ MASTER
 </div>
 
 
-<div class="sub">
+<div class="subtitle">
 
-MSA DIGITAL ASSET ECOSYSTEM
+The Future Of Community Powered Digital Assets
 
 </div>
 
 
-<div class="hero-text">
+<div class="hero-line">
 
-Built for long term sustainability.<br>
+Built for long term blockchain sustainability.<br>
 
-Powered by community trust.<br>
+Powered by transparent ecosystem development.<br>
 
-Designed on Solana infrastructure for future digital expansion.
+Designed to create trust before growth.
 
 </div>
 
 
 <div class="button-area">
+
+<a href="#" class="btn">
+
+BUY TOKEN
+
+</a>
 
 <a href="#" class="btn">
 
@@ -446,7 +425,7 @@ NO FALSE PROMISES<br>
 
 NO ARTIFICIAL HYPE<br>
 
-BUILT FOR LONG TERM TRUST
+LONG TERM TRUST FIRST
 
 </div>
 
@@ -457,17 +436,18 @@ BUILT FOR LONG TERM TRUST
 
 <div class="section-title">
 
-ABOUT MASTERPROJECT
+ABOUT MASTER
 
 </div>
 
+
 <div class="card">
 
-MASTER is a decentralized digital asset ecosystem designed around transparency, long term infrastructure growth and sustainable blockchain development.
+MASTER (MSA) is a long term blockchain infrastructure project focused on transparency, responsible development and community powered ecosystem growth.
 
 <br><br>
 
-Unlike short term hype driven projects, MASTER is focused on creating long term value through community trust, responsible growth and technical sustainability.
+Unlike short term speculative meme token projects, MASTER is being designed around sustainability, credibility and future expansion.
 
 <br><br>
 
@@ -479,10 +459,114 @@ Mohammad Saraei Ara
 
 </div>
 
+</section>
+<section id="tokenomics">
 
-<div class="stats">
+<div class="section-title">
 
-<div class="stat-box">
+LIVE TOKENOMICS
+
+</div>
+
+
+<div style="display:flex;justify-content:center;align-items:center;gap:60px;flex-wrap:wrap;">
+
+
+<div id="token-circle"
+
+style="
+
+width:380px;
+height:380px;
+
+border-radius:50%;
+
+background:conic-gradient(
+
+#00ff66 0% 40%,
+#00cc55 40% 70%,
+#00aa44 70% 85%,
+#008833 85% 95%,
+#ffffff 95% 100%
+
+);
+
+box-shadow:0 0 35px #00ff66;
+
+cursor:pointer;
+
+position:relative;
+
+">
+
+
+<div style="
+
+position:absolute;
+
+width:170px;
+height:170px;
+
+background:#030303;
+
+border-radius:50%;
+
+top:105px;
+left:105px;
+
+">
+
+</div>
+
+</div>
+
+
+
+<div id="token-info"
+
+style="
+
+text-align:left;
+
+max-width:450px;
+
+font-size:22px;
+
+line-height:50px;
+
+color:#d0d0d0;
+
+"
+
+>
+
+CLICK TOKEN CHART
+
+<br><br>
+
+Select a section to display allocation details.
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="section-title">
+
+LIVE PROJECT STATS
+
+</div>
+
+
+<div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;">
+
+
+<div class="card" style="width:260px;">
 
 Network
 
@@ -492,19 +576,10 @@ Solana Blockchain
 
 </div>
 
-<div class="stat-box">
 
-Status
+<div class="card" style="width:260px;">
 
-<br><br>
-
-Development Phase
-
-</div>
-
-<div class="stat-box">
-
-Supply
+Total Supply
 
 <br><br>
 
@@ -512,181 +587,138 @@ Supply
 
 </div>
 
-<div class="stat-box">
 
-Priority
+<div class="card" style="width:260px;">
+
+Development Status
 
 <br><br>
 
-Security First
+Infrastructure Build
+
+</div>
+
+
+<div class="card" style="width:260px;">
+
+Security Level
+
+<br><br>
+
+High Priority
 
 </div>
 
 </div>
 
 </section>
-<section>
 
-<div class="section-title">
-
-TRANSPARENCY STATEMENT
-
-</div>
-
-<div class="card">
-
-MASTER project is built around full transparency and responsible ecosystem development.
-
-<br><br>
-
-We reject unethical market manipulation, fake hype campaigns and misleading financial promises.
-
-<br><br>
-
-Our philosophy is simple :
-
-<br><br>
-
-Build trust first.
-
-Build infrastructure second.
-
-Build growth naturally.
-
-<br><br>
-
-Community confidence is always more valuable than short term market excitement.
-
-</div>
-
-</section>
 
 
 <section>
 
 <div class="section-title">
 
-SECURITY COMMITMENT
+TRANSPARENCY COMMITMENT
 
 </div>
+
 
 <div class="card">
 
-Security remains the highest priority in MASTER architecture.
+MASTER project is committed to full transparency during every phase of development.
 
 <br><br>
 
-Future smart contracts will undergo complete security review before public deployment.
+No artificial market hype.
+
+<br>
+
+No misleading financial promises.
+
+<br>
+
+No unethical liquidity manipulation.
+
+<br>
+
+No irresponsible token deployment.
 
 <br><br>
 
-Liquidity management, ecosystem upgrades and contract structure will always prioritize long term protection.
-
-<br><br>
-
-No rushed deployment.
-
-No unsafe contract launches.
-
-No irresponsible token management.
+Community trust always comes before short term price speculation.
 
 </div>
 
 </section>
 
-
-<section id="tokenomics">
-
-<div class="section-title">
-
-TOKENOMICS STRUCTURE
-
-</div>
-
-<div style="display:flex;justify-content:center;gap:60px;flex-wrap:wrap;align-items:center;">
-
-<div style="width:360px;height:360px;border-radius:50%;
-background:conic-gradient(
-#00ff66 0% 40%,
-#00cc55 40% 70%,
-#009944 70% 85%,
-#007733 85% 95%,
-#ffffff 95% 100%
-);
-box-shadow:0 0 30px #00ff66;
-position:relative;">
-
-<div style="position:absolute;
-width:160px;
-height:160px;
-background:#010101;
-border-radius:50%;
-top:100px;
-left:100px;">
-
-</div>
-
-</div>
-
-
-<div style="text-align:left;font-size:21px;line-height:50px;max-width:450px;">
-
-40% → Liquidity Reserve
-
-<br>
-
-30% → Community Allocation
-
-<br>
-
-15% → Marketing Infrastructure
-
-<br>
-
-10% → Exchange Listings
-
-<br>
-
-5% → Development Fund
-
-<br><br>
-
-TOTAL SUPPLY :
-
-<br>
-
-1,000,000,000,000 MSA
-
-</div>
-
-</div>
-
-</section>
 
 
 <section>
 
 <div class="section-title">
 
-PROJECT PHILOSOPHY
+TOKEN ALLOCATION DETAILS
 
 </div>
 
-<div class="card">
 
-MASTER is not designed as a short term speculative token.
+<div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
 
-<br><br>
 
-MASTER is not created for artificial hype cycles.
+<div class="card" style="width:240px;">
 
-<br><br>
-
-MASTER is being designed as a future blockchain ecosystem focused on community ownership and sustainable development.
+40%
 
 <br><br>
 
-Long term trust will always come before market price.
+Liquidity Reserve
+
+</div>
+
+
+<div class="card" style="width:240px;">
+
+30%
+
+<br><br>
+
+Community Growth
+
+</div>
+
+
+<div class="card" style="width:240px;">
+
+15%
+
+<br><br>
+
+Marketing Expansion
+
+</div>
+
+
+<div class="card" style="width:240px;">
+
+10%
+
+<br><br>
+
+Exchange Listings
+
+</div>
+
+
+<div class="card" style="width:240px;">
+
+5%
+
+<br><br>
+
+Development Fund
+
+</div>
 
 </div>
 
@@ -695,11 +727,13 @@ Long term trust will always come before market price.
 
 <div class="section-title">
 
-PROJECT ROADMAP
+DEVELOPMENT ROADMAP
 
 </div>
 
-<div style="display:flex;flex-direction:column;gap:30px;max-width:900px;margin:auto;">
+
+<div style="display:flex;flex-direction:column;gap:30px;max-width:950px;margin:auto;">
+
 
 <div class="card">
 
@@ -707,21 +741,22 @@ PHASE 1 — FOUNDATION BUILD
 
 <br><br>
 
-Brand Identity Development
+Project Branding
 
 <br>
 
-Website Deployment
+Website Infrastructure
 
 <br>
 
-Legal Infrastructure Setup
+Security Architecture
 
 <br>
 
-Community Foundation Structure
+Core Community Planning
 
 </div>
+
 
 
 <div class="card">
@@ -730,7 +765,7 @@ PHASE 2 — COMMUNITY EXPANSION
 
 <br><br>
 
-Telegram Launch
+Telegram Infrastructure
 
 <br>
 
@@ -738,13 +773,14 @@ X Platform Launch
 
 <br>
 
-Discord Infrastructure
+Discord Community Growth
 
 <br>
 
-Organic Community Growth
+Early Global Awareness
 
 </div>
+
 
 
 <div class="card">
@@ -753,7 +789,7 @@ PHASE 3 — TOKEN DEPLOYMENT
 
 <br><br>
 
-Smart Contract Finalization
+Smart Contract Deployment
 
 <br>
 
@@ -761,22 +797,23 @@ Liquidity Preparation
 
 <br>
 
-DEX Deployment
+DEX Infrastructure
 
 <br>
 
-Public Infrastructure Testing
+Initial Public Trading
 
 </div>
 
 
+
 <div class="card">
 
-PHASE 4 — ECOSYSTEM GROWTH
+PHASE 4 — LONG TERM ECOSYSTEM
 
 <br><br>
 
-NFT Expansion
+NFT Marketplace
 
 <br>
 
@@ -784,7 +821,7 @@ DAO Governance
 
 <br>
 
-Reward Engine Development
+Reward System
 
 <br>
 
@@ -797,6 +834,7 @@ Strategic Partnerships
 </section>
 
 
+
 <section id="community">
 
 <div class="section-title">
@@ -805,51 +843,57 @@ COMMUNITY NETWORK
 
 </div>
 
+
 <div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;">
 
-<div class="stat-box">
+
+<div class="card" style="width:250px;">
 
 Telegram
 
 <br><br>
 
-Coming Soon
+Official Community Channel
 
 </div>
 
-<div class="stat-box">
+
+<div class="card" style="width:250px;">
 
 X Platform
 
 <br><br>
 
-Coming Soon
+Global Social Presence
 
 </div>
 
-<div class="stat-box">
+
+<div class="card" style="width:250px;">
 
 Discord
 
 <br><br>
 
-Coming Soon
+Community Governance Hub
 
 </div>
 
-<div class="stat-box">
 
-DAO Governance
+<div class="card" style="width:250px;">
+
+GitHub
 
 <br><br>
 
-Future System
+Open Infrastructure Development
 
 </div>
 
 </div>
 
 </section>
+
 
 
 <section>
@@ -860,17 +904,18 @@ WHITEPAPER PREVIEW
 
 </div>
 
+
 <div class="card">
 
-MASTER Whitepaper defines long term ecosystem architecture and technical development structure.
+MASTER whitepaper defines the long term development strategy behind the ecosystem.
 
 <br><br>
 
-Included Documentation :
+Included sections :
 
 <br><br>
 
-Token Utility Design
+Project Vision
 
 <br>
 
@@ -878,11 +923,11 @@ Security Architecture
 
 <br>
 
-Supply Distribution Logic
+Token Utility Design
 
 <br>
 
-Long Term Ecosystem Expansion
+Supply Distribution Logic
 
 <br>
 
@@ -890,33 +935,35 @@ Governance Infrastructure
 
 <br>
 
-Risk Management Strategy
+Long Term Ecosystem Strategy
 
 <br><br>
 
-Document Version : 1.0
+Whitepaper Version : 1.0
 
 </div>
 
 </section>
+
 
 
 <section>
 
 <div class="banner">
 
-MASTER IS NOT JUST A TOKEN
+MASTER IS NOT A SHORT TERM TOKEN
 
 <br><br>
 
-MASTER IS A DIGITAL MOVEMENT
+MASTER IS A LONG TERM DIGITAL ECOSYSTEM
 
 </div>
 
 </section>
 
 
-<section id="ecosystem">
+
+<section>
 
 <div class="section-title">
 
@@ -924,48 +971,87 @@ FUTURE ECOSYSTEM
 
 </div>
 
+
 <div style="display:flex;justify-content:center;gap:20px;flex-wrap:wrap;">
 
-<div class="stat-box">
+
+<div class="card" style="width:220px;">
 
 NFT Marketplace
 
 </div>
 
-<div class="stat-box">
 
-DAO Voting
+<div class="card" style="width:220px;">
 
-</div>
-
-<div class="stat-box">
-
-Reward System
+DAO Voting System
 
 </div>
 
-<div class="stat-box">
 
-DEX Listings
+<div class="card" style="width:220px;">
 
-</div>
-
-<div class="stat-box">
-
-Future CEX Listings
+Future DEX
 
 </div>
 
-<div class="stat-box">
 
-Global Partnerships
+<div class="card" style="width:220px;">
+
+Staking Infrastructure
+
+</div>
+
+
+<div class="card" style="width:220px;">
+
+Reward Engine
+
+</div>
+
+
+<div class="card" style="width:220px;">
+
+Developer API
 
 </div>
 
 </div>
 
 </section>
-<footer style="padding:80px 20px;background:#050505;border-top:1px solid rgba(0,255,100,0.2);margin-top:80px;">
+<section id="legal">
+
+<div class="section-title">
+
+LEGAL & PROJECT SECURITY
+
+</div>
+
+
+<div class="card">
+
+MASTER is being developed with long term transparency and responsible blockchain standards.
+
+<br><br>
+
+Users should always perform independent research before interacting with any future ecosystem product.
+
+<br><br>
+
+MASTER does not guarantee financial returns.
+
+<br><br>
+
+Long term credibility will always remain the highest priority.
+
+</div>
+
+</section>
+
+
+
+<footer style="padding:90px 20px;background:#050505;border-top:1px solid rgba(0,255,100,0.2);margin-top:80px;">
+
 
 <div style="font-size:34px;color:#00ff66;text-shadow:0 0 15px #00ff66;margin-bottom:30px;">
 
@@ -974,48 +1060,54 @@ MASTERPROJECT
 </div>
 
 
-<div style="max-width:850px;margin:auto;line-height:35px;color:#bfbfbf;font-size:17px;">
+<div style="max-width:850px;margin:auto;line-height:38px;color:#bfbfbf;font-size:17px;">
 
-MASTER is being developed as a long term blockchain ecosystem focused on trust, sustainability and responsible decentralized growth.
-
-<br><br>
-
-Official Founder & Owner :
+Official Founder & Owner
 
 <br><br>
 
 Mohammad Saraei Ara
 
+<br><br>
+
+MASTER project infrastructure is protected under copyright ownership and intellectual property rights.
+
 </div>
 
 
-<div style="display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:45px;margin-bottom:45px;">
 
-<a href="privacy.html" class="btn">
+<div style="display:flex;justify-content:center;gap:25px;flex-wrap:wrap;margin-top:45px;margin-bottom:45px;">
+
+
+<a href="#" class="btn">
 
 Privacy Policy
 
 </a>
 
-<a href="terms.html" class="btn">
+
+<a href="#" class="btn">
 
 Terms Of Service
 
 </a>
 
-<a href="copyright.html" class="btn">
+
+<a href="#" class="btn">
 
 Copyright Notice
 
 </a>
 
-<a href="disclaimer.html" class="btn">
+
+<a href="#" class="btn">
 
 Legal Disclaimer
 
 </a>
 
 </div>
+
 
 
 <div style="line-height:34px;color:gray;font-size:15px;">
@@ -1028,10 +1120,6 @@ All Rights Reserved.
 
 <br><br>
 
-Unauthorized duplication, reproduction or imitation of MASTER project materials is prohibited.
-
-<br><br>
-
 Powered By Solana Infrastructure
 
 </div>
@@ -1039,12 +1127,55 @@ Powered By Solana Infrastructure
 </footer>
 
 
+
 <script>
 
-console.log("MASTERPROJECT initialized");
+
+const tokenCircle = document.getElementById("token-circle");
+
+const tokenInfo = document.getElementById("token-info");
+
+
+let current = 0;
+
+
+const allocations = [
+
+"40% → Liquidity Reserve <br><br> Reserved for long term liquidity stability.",
+
+"30% → Community Growth <br><br> Designed to strengthen global community expansion.",
+
+"15% → Marketing Expansion <br><br> Dedicated to strategic long term ecosystem growth.",
+
+"10% → Exchange Listings <br><br> Future DEX and exchange infrastructure preparation.",
+
+"5% → Development Fund <br><br> Reserved for technical development and security upgrades."
+
+];
+
+
+tokenCircle.addEventListener("click",function(){
+
+current++;
+
+if(current > 4){
+
+current = 0;
+
+}
+
+tokenInfo.innerHTML = allocations[current];
+
+});
+
+
+console.log("MASTERPROJECT V2 initialized");
+
 
 </script>
+
 
 </body>
 
       </html>
+      
